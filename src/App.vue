@@ -1,7 +1,7 @@
 <script setup>
-import Card from './components/Card.vue'
+  import ProductDisplay from './components/ProductDisplay.vue';
 </script>
 
 <template>
-  <Card />
+  <ProductDisplay />
 </template>

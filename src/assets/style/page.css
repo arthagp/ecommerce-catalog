@@ -1,0 +1,240 @@
+:root {
+    --dark-blue: #002772;
+    --light-blue: #d6e6ff;
+    --dark-purple: #720060;
+    --pink: #fde2ff;
+    --dark-gray: #3f3f3f;
+    --light-gray: #dcdcdc;
+}
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* background */
+.bg-men {
+    background: linear-gradient(to bottom, var(--light-blue) 70%, white 30%);
+}
+
+.bg-women {
+    background: linear-gradient(to bottom, var(--pink) 70%, white 30%);
+}
+
+.bg-unknown {
+    background: linear-gradient(to bottom, var(--light-gray) 70%, white 30%);
+}
+
+.bg {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.horizontal-line {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* text color */
+.text-dark-blue {
+    color: var(--dark-blue);
+}
+
+.text-dark-purple {
+    color: var(--dark-purple);
+}
+
+/* card */
+.card {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    height: 70vh;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-unknown {
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../unknown.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 85%;
+}
+
+.product-img {
+    flex: 40%;
+    text-align: center;
+}
+
+.product-desc {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600px;
+    margin-bottom: 8px;
+}
+
+.category-rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--dark-gray);
+    margin: 30px 0 10px 0;
+}
+
+.description {
+    padding-bottom: 50px;
+    font-size: 20px;
+    height: 138px;
+}
+
+.price {
+    font-size: 27px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.btn {
+    flex: 50%;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-buy-men {
+    background-color: var(--dark-blue);
+    border: 3px solid;
+    border-color: var(--dark-blue);
+    color: white;
+}
+
+.btn-next-men {
+    background-color: white;
+    border: 3px solid;
+    border-color: var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+.btn-buy-women {
+    background-color: var(--dark-purple);
+    border: 3px solid;
+    border-color: var(--dark-purple);
+    color: white;
+}
+
+.btn-next-women {
+    background-color: white;
+    border: 3px solid;
+    border-color: var(--dark-purple);
+    color: var(--dark-purple);
+}
+
+.btn-next-unkknown {
+    background-color: white;
+    border: 3px solid;
+    border-color: black;
+    color: black;
+    flex: none;
+    width: 500px;
+}
+
+.txt-unkknown {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* rating */
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rate {
+    margin-right: 5px;
+}
+
+.rating-circles {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.circle-men,
+.circle-women {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: 3px;
+}
+
+.circle-men {
+    background-color: var(--dark-blue);
+}
+
+.circle-women {
+    background-color: var(--dark-purple);
+}
+
+/* spinner */
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    border-top: 4px solid rgb(63, 165, 198);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spinner 1s linear infinite;
+}
+
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
